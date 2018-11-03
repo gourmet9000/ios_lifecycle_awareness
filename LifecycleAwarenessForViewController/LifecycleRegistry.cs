@@ -5,9 +5,9 @@ namespace LifecycleAwarenessForViewController
 {
     public class LifecycleRegistry : Lifecycle
     {
-        private IList<LifecycleObserver> _lifecycleObservers;
-        private LifecycleOwner _lifecycleOwner;
+        private IList<LifecycleObserver> _lifecycleObservers = new List<LifecycleObserver>();
 
+        public LifecycleOwner LifecycleOwner { get; set; }
         public LifecycleEvent CurrentEvent { get; private set; }
         public LifecycleState CurrentState { get; private set; }
 
@@ -57,7 +57,7 @@ namespace LifecycleAwarenessForViewController
                 {
                     var lifecycleAwareMethod =
                         (LifecycleAwareMethod) Attribute.GetCustomAttribute(method, typeof(LifecycleAwareMethod));
-                    if (lifecycleAwareMethod.LifecycleEvent == CurrentEvent)
+                    if (lifecycleAwareMethod?.LifecycleEvent == CurrentEvent)
                     {
                         method.Invoke(observer, new object[] { });
                     }

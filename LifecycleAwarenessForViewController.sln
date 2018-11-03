@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifecycleAwarenessForViewController", "LifecycleAwarenessForViewController\LifecycleAwarenessForViewController.csproj", "{BABEBE8E-635C-4C01-890C-2E0B7445A878}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{BABEBE8E-635C-4C01-890C-2E0B7445A878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BABEBE8E-635C-4C01-890C-2E0B7445A878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BABEBE8E-635C-4C01-890C-2E0B7445A878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 EndGlobal

@@ -8,6 +8,11 @@ namespace LifecycleAwarenessForViewController
 
         public Lifecycle Lifecycle => _lifecycleRegistry;
 
+        public LifecycleProvidingViewController()
+        {
+            _lifecycleRegistry.LifecycleOwner = this; 
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
