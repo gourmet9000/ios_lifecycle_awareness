@@ -8,11 +8,7 @@ namespace SampleApp
         //TODO dependency injection
         public SampleViewController(IEnumerable<ILifecycleObserver> observers)
         {
-            foreach (var observer in observers)
-            {
-                Lifecycle.AddObserver(observer);
-            }
-        }
-        
+            Lifecycle.AddObservers(observers);
+        }   
     }
 }

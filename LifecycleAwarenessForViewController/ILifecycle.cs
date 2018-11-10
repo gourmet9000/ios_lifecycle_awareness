@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LifecycleAwarenessForViewController
 {
     public interface ILifecycle
@@ -5,6 +7,8 @@ namespace LifecycleAwarenessForViewController
         LifecycleState CurrentState { get; }
 
         void AddObserver(ILifecycleObserver lifecycleObserver);
+
+        void AddObservers(IEnumerable<ILifecycleObserver> lifecycleObservers);
 
         void RemoveObserver(ILifecycleObserver lifecycleObserver);
 
