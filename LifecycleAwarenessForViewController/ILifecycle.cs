@@ -1,12 +1,12 @@
 namespace LifecycleAwarenessForViewController
 {
-    public interface Lifecycle
+    public interface ILifecycle
     {
         LifecycleState CurrentState { get; }
 
-        void AddObserver(LifecycleObserver lifecycleObserver);
+        void AddObserver(ILifecycleObserver lifecycleObserver);
 
-        void RemoveObserver(LifecycleObserver lifecycleObserver);
+        void RemoveObserver(ILifecycleObserver lifecycleObserver);
 
         bool IsAtLeast(LifecycleState lifecycleState);
     }

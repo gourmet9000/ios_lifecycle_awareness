@@ -6,7 +6,7 @@ namespace LifecycleAwarenessForViewController
     {
         private readonly LifecycleRegistry _lifecycleRegistry = new LifecycleRegistry();
 
-        public Lifecycle Lifecycle => _lifecycleRegistry;
+        public ILifecycle Lifecycle => _lifecycleRegistry;
 
         public LifecycleProvidingViewController()
         {

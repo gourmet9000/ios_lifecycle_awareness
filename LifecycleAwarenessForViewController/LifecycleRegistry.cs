@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace LifecycleAwarenessForViewController
 {
-    public class LifecycleRegistry : Lifecycle
+    public class LifecycleRegistry : ILifecycle
     {
-        private IList<LifecycleObserver> _lifecycleObservers = new List<LifecycleObserver>();
+        private IList<ILifecycleObserver> _lifecycleObservers = new List<ILifecycleObserver>();
 
         public LifecycleOwner LifecycleOwner { get; set; }
         public LifecycleEvent CurrentEvent { get; private set; }
         public LifecycleState CurrentState { get; private set; }
 
-        public void AddObserver(LifecycleObserver lifecycleObserver)
+        public void AddObserver(ILifecycleObserver lifecycleObserver)
         {
             _lifecycleObservers.Add(lifecycleObserver);
         }
 
-        public void RemoveObserver(LifecycleObserver lifecycleObserver)
+        public void RemoveObserver(ILifecycleObserver lifecycleObserver)
         {
             _lifecycleObservers.Remove(lifecycleObserver);
         }
@@ -56,7 +56,7 @@ namespace LifecycleAwarenessForViewController
                 foreach (var method in observer.GetType().GetMethods())
                 {
                     var lifecycleAwareMethod =
-                        (LifecycleAwareMethod) Attribute.GetCustomAttribute(method, typeof(LifecycleAwareMethod));
+                        (LifecycleAwareMethodAttribute) Attribute.GetCustomAttribute(method, typeof(LifecycleAwareMethodAttribute));
                     if (lifecycleAwareMethod?.LifecycleEvent == CurrentEvent)
                     {
                         method.Invoke(observer, new object[] { });

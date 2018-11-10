@@ -1,5 +1,5 @@
 namespace LifecycleAwarenessForViewController
 {
-    public interface LifecycleObserver
+    public interface ILifecycleObserver
     {}
 }

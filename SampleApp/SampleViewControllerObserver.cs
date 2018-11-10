@@ -3,7 +3,7 @@ using LifecycleAwarenessForViewController;
 
 namespace SampleApp
 {
-    public class SampleViewControllerObserver : LifecycleObserver
+    public class SampleViewControllerObserver : ILifecycleObserver
     {
 
         [LifecycleAwareMethod(LifecycleEvent = LifecycleEvent.ViewDidAppear)]

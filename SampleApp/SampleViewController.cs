@@ -6,7 +6,7 @@ namespace SampleApp
     public class SampleViewController : LifecycleProvidingViewController
     {
         //TODO dependency injection
-        public SampleViewController(IEnumerable<LifecycleObserver> observers)
+        public SampleViewController(IEnumerable<ILifecycleObserver> observers)
         {
             foreach (var observer in observers)
             {
