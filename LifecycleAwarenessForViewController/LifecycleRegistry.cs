@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace LifecycleAwarenessForViewController
 {
@@ -55,8 +56,7 @@ namespace LifecycleAwarenessForViewController
             {
                 foreach (var method in observer.GetType().GetMethods())
                 {
-                    var lifecycleAwareMethod =
-                        (LifecycleAwareMethodAttribute) Attribute.GetCustomAttribute(method, typeof(LifecycleAwareMethodAttribute));
+                    var lifecycleAwareMethod = method.GetCustomAttribute<LifecycleAwareMethodAttribute>(); 
                     if (lifecycleAwareMethod?.LifecycleEvent == CurrentEvent)
                     {
                         method.Invoke(observer, new object[] { });
