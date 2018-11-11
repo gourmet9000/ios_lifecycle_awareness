@@ -2,6 +2,7 @@
 using Foundation;
 using LifecycleAwarenessForViewController;
 using UIKit;
+using PlatformAgnosticComponents;
 
 namespace SampleApp
 {
@@ -20,14 +21,14 @@ namespace SampleApp
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 
-            
-            
+
+
             // If you have defined a root view controller, set it here:
-            var sampleViewControllerObserver = new SampleViewControllerObserver();
-            var sampleViewController = new SampleViewController(new List<ILifecycleObserver>{sampleViewControllerObserver});
+            var sampleViewControllerObserver = new SampleObserver(new SampleObserverDelegate());
+            var sampleViewController = new SampleViewController(new List<ILifecycleObserver> { sampleViewControllerObserver });
             var navigationController = new UINavigationController(sampleViewController);
-            Window.RootViewController = navigationController; 
-            
+            Window.RootViewController = navigationController;
+
             // make the window visible
             Window.MakeKeyAndVisible();
 

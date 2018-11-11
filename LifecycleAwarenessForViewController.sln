@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifecycleAwarenessForViewController", "LifecycleAwarenessForViewController\LifecycleAwarenessForViewController.csproj", "{BABEBE8E-635C-4C01-890C-2E0B7445A878}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{79D40328-272D-4EC0-8FEA-F0B92CFDF9D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSampleApp", "AndroidSampleApp\AndroidSampleApp.csproj", "{3DABA61B-2586-4747-BC79-B4D2C8FCD51F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformAgnosticComponents", "PlatformAgnosticComponents\PlatformAgnosticComponents.csproj", "{C2829ABB-A9DE-4834-82D0-E579A9A72D57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +27,9 @@ Global
 		{3DABA61B-2586-4747-BC79-B4D2C8FCD51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DABA61B-2586-4747-BC79-B4D2C8FCD51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DABA61B-2586-4747-BC79-B4D2C8FCD51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2829ABB-A9DE-4834-82D0-E579A9A72D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2829ABB-A9DE-4834-82D0-E579A9A72D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2829ABB-A9DE-4834-82D0-E579A9A72D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2829ABB-A9DE-4834-82D0-E579A9A72D57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

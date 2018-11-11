@@ -3,6 +3,7 @@ using Android.App;
 using Android.Arch.Lifecycle;
 using Android.OS;
 using Android.Support.V7.App;
+using PlatformAgnosticComponents;
 
 namespace AndroidSampleApp
 {
@@ -19,7 +20,8 @@ namespace AndroidSampleApp
 
         private void AddLifecycleFragment()
         {
-            var sampleFragmentObserver = new SampleFragmentObserver();
+            //TODO dependency injection
+            var sampleFragmentObserver = new SampleObserver(new SampleObserverDelegate());
             var sampleFragment = new SampleFragment(new List<ILifecycleObserver> { sampleFragmentObserver });
             SupportFragmentManager.BeginTransaction().Add(sampleFragment, _fragmentTag).Commit();
         }
