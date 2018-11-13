@@ -87,7 +87,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="SampleViewController.cs" />
-    <Compile Include="SampleObserver.cs" />
+    <Compile Include="SampleObserverProxy.cs" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />

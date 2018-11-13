@@ -21,7 +21,7 @@ namespace AndroidSampleApp
         private void AddLifecycleFragment()
         {
             //TODO dependency injection
-            var sampleFragmentObserver = new SampleObserver(new SampleObserverDelegate());
+            var sampleFragmentObserver = new SampleObserverProxy(new SampleObserver());
             var sampleFragment = new SampleFragment(new List<ILifecycleObserver> { sampleFragmentObserver });
             SupportFragmentManager.BeginTransaction().Add(sampleFragment, _fragmentTag).Commit();
         }

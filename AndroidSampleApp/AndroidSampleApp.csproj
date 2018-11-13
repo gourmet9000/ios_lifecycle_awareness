@@ -117,7 +117,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleFragment.cs" />
-    <Compile Include="SampleObserver.cs" />
+    <Compile Include="SampleObserverProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

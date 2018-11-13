@@ -24,7 +24,7 @@ namespace SampleApp
 
 
             // If you have defined a root view controller, set it here:
-            var sampleViewControllerObserver = new SampleObserver(new SampleObserverDelegate());
+            var sampleViewControllerObserver = new SampleObserverProxy(new SampleObserver());
             var sampleViewController = new SampleViewController(new List<ILifecycleObserver> { sampleViewControllerObserver });
             var navigationController = new UINavigationController(sampleViewController);
             Window.RootViewController = navigationController;
