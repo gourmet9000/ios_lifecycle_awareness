@@ -2,7 +2,7 @@ using System;
 using LifecycleAwarenessForViewController;
 using PlatformAgnosticComponents;
 
-namespace SampleApp
+namespace iOSSampleApp
 {
     public class SampleObserverProxy : ILifecycleObserver
     {

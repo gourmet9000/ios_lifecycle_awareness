@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using LifecycleAwarenessForViewController;
 
-namespace SampleApp
+namespace iOSSampleApp
 {
     public class SampleViewController : LifecycleProvidingViewController
     {
-        //TODO dependency injection
         public SampleViewController(IEnumerable<ILifecycleObserver> observers)
         {
             Lifecycle.AddObservers(observers);
